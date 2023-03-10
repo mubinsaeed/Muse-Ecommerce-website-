@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>MUSE.com</title>
+    <style>
+      .container1{
+          display: inline-grid;
+          grid-template-columns: auto auto;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          margin-top: 2cm;
+          margin-left: 15%;
+          margin-right: 25%;
+          padding-left: 0;
+      }
+
+     
+      
+      .container1 .col1{
+          width: max-content;
+          height: 800px;
+      }
+      .container1 .col2{
+          width: fit-content;
+          height: max-content;
+          margin: 4px 4px 4px;
+          padding: 20px 20px 20px;
+      }
+      
+       .container1 .col2 .p1{
+          font-size: 1.5cm;
+      }
+      .container1 .col2 .p2{
+          margin-top: 0;
+          font-size: xx-large;
+      }
+      .container1 .col2 .p3{
+          font-size: xx-large;
+      }
+      .container1 .col2 .p4{
+          font-size: x-large;
+      }
+      .container1 .col2 .p5{
+          display: flex;
+          font-size: 30px;
+          max-width: max-content;
+          margin-top: 12px;
+      }
+      
+      .contain {
+                      justify-content: left;
+                      align-items: left;
+                      display:flex;
+                      height: max-content;
+                  }
+        
+                  /*apply css properties to button tag*/
+        
+                  .contain button {
+                      width: 40px;
+                      height: 40px;
+                      font-size: 20px;
+                      font-weight: bold;
+                      background-color: black;
+                      color: honeydew;
+                      margin-top: 0.5cm;
+                      margin-left: 0.75cm;
+                  }
+        
+                  /*apply hover effect to button tag*/
+        
+                  .contain button:hover {
+                      background-color: grey;
+                      color: black;
+                  }
+        
+                  /*apply css properties to h2 tag*/
+        
+                  h2 {
+                      color: black;
+                      margin-top: 0.5cm;
+                      margin-left: 0.75cm;
+                      font-size: 25px;
+                  }
+                  /*apply css properties to h1 tag*/
+        
+                  h1 {
+                      font-size: 20px;
+                      color: green;
+                      text-align: center;
+                      padding-left: 10%;
+                  }
+                  
+      .button-40 {
+        background-color: black;
+        border: 1px solid transparent;
+        border-radius: .75rem;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        flex: 0 0 auto;
+        font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        padding: .75rem 1.2rem;
+        text-align: center;
+        text-decoration: none #6B7280 solid;
+        text-decoration-thickness: auto;
+        transition-duration: .2s;
+        transition-property: background-color,border-color,color,fill,stroke;
+        transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 300px;
+        height: max-content;
+        margin-top: 1cm;
+      }
+      
+      .button-40:hover {
+        background-color: #374151;
+      }
+      
+      .button-40:focus {
+        box-shadow: none;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      
+      @media (min-width: 768px) {
+        .button-40 {
+          padding: .75rem 1.5rem;
+        }
+      }
+      
+      
+      
+      footer{
+        margin-top: 50px;
+        background-color: black;
+        padding: 7% 7% 7%;
+        line-height: 3rem;
+      }
+      
+      footer .row .col1{
+        padding-left: 40px;
+        padding-top: 30px;
+        color: white;
+        display: inline-block;
+        max-width: 25%;
+        line-height: 1rem;
+      }
+      
+      footer .row .col2{
+        padding-left: 40px;
+        padding-top: 30px;
+        color: white;
+        max-width: 25%;
+      }
+      
+      footer .row .col2 a{
+      color: white;
+      text-decoration: none;
+      
+      }
+      
+      
+      footer .row .col3{
+        padding-left: 40px;
+        padding-top: 30px;
+        color: white;
+        max-width: 25%;
+      }
+      
+      footer .row .col3 a{
+      color: white;
+      text-decoration: none;
+      
+      }
+      
+      footer .row .col4 h5{
+      color:  white;
+      }
+      
+      footer .row .col4 p{
+        color: white;
+      }
+      
+      footer .row .col4{
+        padding-left: 40px;
+        padding-top: 30px;
+        color: white;
+        display: inline-block;
+        max-width: 25%;
+      }
+      
+      
+      footer .cr h1{
+        color: white;
+        font-size: large;
+        padding-left: 0;
+        text-align: left;
+      
+      }
+      footer .cr{
+        margin-top:3rem;
+        padding-left: 0;
+        
+      }
+      
+      footer input[type="text"]
+      {
+        height: 48px;
+      }
+      
+      nav{
+            width: 100%;
+            display: flex;
+            position: fixed;
+            top: 0;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 10px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 50px;
+        }
+        
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .logo{
+            padding: 0% 1%;
+        }
+        
+        .left-items{
+            padding-left: 15%;
+        }
+        
+        
+        
+        .left-items .MEN{
+            display: inline-block;
+            position: relative;
+            color: black;
+          }
+          
+          .left-items .MEN:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+          
+          .left-items .MEN:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        
+        .left-items .WOMEN{
+            display: inline-block;
+            position: relative;
+            color: black;
+          }
+        
+          
+          .left-items .WOMEN:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+          
+          .left-items .WOMEN:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        
+          
+          .left-items .KIDS{
+            display: inline-block;
+            position: relative;
+            color: black;
+          }
+          
+          .left-items .KIDS:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+          
+          .left-items .KIDS:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+      </style>
+</head>
+
+
+
+<body>
+
+
+  <% if(session_value == -1) { %>
+    <%    var feature = "../login";  %>
+    <%  }  %>
+    <%   if(session_value != -1){  %>
+      <%   feature = "../cart";  %>
+      <%  }  %>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="../index2">
+        <img src="/pictures/MUSE LOGO/Capture.PNG" alt="image not found"  width="060px" >      
+      </a>    
+    </div>
+   
+ <ul class=" left-items">
+    <li class="MEN">
+     <a href="../men">MEN</a>
+    </li>
+    <li class="WOMEN"> 
+    <a href="../women">WOMEN</a>
+    </li>
+    <li class="KIDS">
+    <a href="../accesories">ACCESSORIES</a>
+    </li>
+    </ul>
+    <ul class="right items">
+    <li>
+     <% if(session_value != -1) {  %>
+      <form action="/logoutuser" method="post">  
+        <button type="submit"> <ion-icon name="log-out">logout</ion-icon></button>
+        </form>
+        <% }%>
+  
+    </li>
+    <li> 
+
+      <% if(session_value != -1) {  %>
+           <h4>Hi,<%=session_name%></h4>
+          <% }%>
+          <% if(session_value == -1) {  %>
+            <a href="../register"><ion-icon name="person-outline"></ion-icon></a>
+              <% }%>
+       
+    </li>
+    <li>
+        <a href=<%= feature %>  ><ion-icon name="bag-outline"></ion-icon></a>
+    </li>
+ </ul>
+</nav>  
+
+
+             <div class="container1">
+                 <div class="col1"><img src=<%=item[0].img_url%>  height="500px" width="500px" alt=""></div>
+                
+<%let newtag = item[0].category_id;%>
+<% if(newtag==1) {%>
+<% var t = "MEN"; }%>
+<% if(newtag==2){ %>
+<% t = "WOMEN"; }%>
+<% if(newtag>2){%>
+<% t = "ACCESSORIES";} %>
+              <div class="col2">
+                <p class="p2"><b><%=item[0].title%></b></p>
+                <p class="p2">Price: $<%=item[0].price%></p>
+                <p class="p4"> <b>Description: </b> <%=item[0].descp%> </p>
+                <p class="p4"><b>BRAND :</b>&nbsp; &nbsp;<%=item[0].brand%> <br><b>TAG :</b> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<%=t%><br><b>STATUS:</b>&nbsp;&nbsp;&nbsp;<%=item[0].pstatus%> </p>
+
+
+                <% if(session_value == -1) {  %>
+                  <div class ="contain">
+                    <p class="p5"> <b>QUANTITY </b></p>
+                    <input value="1" min="1" max="<%=item[0].stock%>" style="margin-top:0.7rem;margin-left:1rem;background-color: rgb(45, 45, 68);font-size:larger;color: white; width:50px ; height:50px;" type="number" name="count_product" id="counting" >
+                 </div>
+                  <% }%>
+                  <% if(session_value != -1) {  %>
+                   <%var customurl = "../product/"+item[0].Pid+"/"+item[0].price %>
+                <form action=<%= customurl %> method="post">
+              <div class ="contain">
+                 <p class="p5"> <b>QUANTITY </b></p>
+                 <input value="1" min="0" max="<%=item[0].stock%>" style="margin-top:0.7rem;margin-left:1rem;background-color: rgb(45, 45, 68);font-size:larger;color: white; width:50px ; height:50px;" type="number" name="count_product" id="counting" >
+              </div>
+
+               <a href=""> <button class="button-40" type="submit">ADD TO CART</button> </a>
+              </form>
+                <% }%>
+               </div>
+
+
+
+         </div>
+
+        
+         <div style="padding:0 20%; margin-top: 20px; margin-right: 100px;">
+        <%  if(session_value!= -1){ %>
+          <form action=<%= item[0].Pid %> method="post">
+          <textarea placeholder="write a review" class="form-control" name="postBody" rows="2" cols="5"></textarea>
+       <button class="btn btn-danger mt-3" type="submit">Submit feedback</button>
+      </form>
+       <%  }  %>
+            <hr>
+            <hr>
+            <h2>Reviews from customers</h2>
+            <hr>
+           
+
+            <%   rev.forEach(function(reviews){ %>
+       <div style="border: 1px  ;" class="bg-light">
+            <div class="mt-2" style="display:flex;">
+              <div style="width:50px;height:50px; border-radius:50%; background-color: #6B7280;"></div>
+              <h4 style="margin-top:5px; margin-left: 15px;"><%= reviews.name %></h4>
+            </div>
+            <p class="" style="margin-left: 4rem; margin-top: -12px;"><%= reviews.text %></p>
+          </div>
+          <%  })  %>
+     
+        </div>
+         <footer>
+          <div class="footer">
+                 <div class="row ">
+                                  <div class="col1 ">
+                                           <h5 class="col1-heading"> MUSE</h6>
+                                             <p class="col1-text1">We’re available by phone +123-456-789 </p> 
+                                             <p class="col1-text2">info@example.com</p>
+                                             <p class="col1-text3">Monday till Friday 10 to 6 EST </p> 
+                                  </div>
+                                 
+                                  <div class="col2 ">
+                                   <h5 class="col2-heading">About US</h6>
+                                     <ul>
+                                      <li> <a href="#">Contact US</a></li> 
+                                      <li> <a href="#">Factories</a></li> 
+                                      <li> <a href="#">Careers</a></li> 
+                                      <li> <a href="#">Shipping Policy</a></li> 
+                                      <li> <a href="#">Terms and conditions</a></li> 
+                                      <li> <a href="#">Refund Policy</a></li> 
+                                     </ul>
+                                 </div>
+      
+                                 <div class="col3 ">
+                                   <h5 class="col3-heading">Our Shop</h6>
+                                     <ul>
+                                      <li> <a href="#">New Arrival</a></li> 
+                                      <li> <a href="#">Top Trending</a></li> 
+                                      <li> <a href="#">Autumn Collection</a></li> 
+                                      <li> <a href="#">Back in Stock</a></li> 
+                                      <li> <a href="#">Denim Collection</a></li> 
+                                     </ul>
+                                  </div>
+                                 
+                                  <div class="col4">
+                                   <h5 class="col4-heading">Newsletter</h6>
+                                     <p class="col4-text4">Receive our weekly newsletter. For dietary content, fashion insider and the best offers.</p> 
+                                     <div class="input-group mb-3">
+                                       <input type="text" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                       <button class="btn btn-light  btn-outline-secondary btn-lg" type="button" id="button-addon2">JOIN</button>
+                                     </div>
+                                  </div>
+                  </div>
+      <div class="cr">
+      <h1>Copyright © 2022 MUSE. All rights reserved.</h1>
+      </div>
+          </div>
+      </footer>
+      
+<script>
+    //initialising a variable name data
+    var data = 0;
+
+    //printing default value of data that is 0 in h2 tag
+    document.getElementById("counting").innerText = data;
+
+    //creation of increment function
+    function increment() {
+        data = data + 1;
+        document.getElementById("counting").innerText = data;
+    }
+    //creation of decrement function
+    function decrement() {
+        data = data - 1;
+        if(data<=0)
+        data = 0;
+        document.getElementById("counting").innerText = data;
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

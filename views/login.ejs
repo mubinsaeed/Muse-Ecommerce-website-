@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>LOGIN</title>
+
+
+
+    <style>
+.container{
+    margin-top: 10px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/pictures/register/register.jpg);
+   background-position:center ;
+   background-size: cover;
+   position:static;
+}
+ 
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    background:#fff ;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: burlywood;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.form-box h1::after{
+     content: '';
+     width: 30px;
+     height: 4px;
+     border-radius: 3px;
+     background: burlywood;
+     position: absolute;
+     bottom: -12px;
+     left: 50%;
+     transform: translateX(-50%);
+}
+
+
+.input-field{
+    background:#eaeaea ;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+     align-items: center;
+     max-height: 65px;
+     transition: max-height 0.5s;
+    overflow: hidden;
+
+
+}
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+
+}
+
+.input-field i{
+    margin-left:  15px;
+    color: #999;
+
+}
+
+form p{
+    text-align: left;
+    font-size: 13px;
+}
+
+form p a{
+     text-decoration: none;
+     color: burlywood;
+     font-family: 'Open Sans', sans-serif;
+}
+
+.btn-field{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+
+}
+
+.btn-field button{
+    flex-basis: 48%;
+    background: burlywood;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.btn-field button:hover{
+    background-color: rgb(183, 135, 23);
+}
+
+.btn-field button.disable{
+    background: #eaeaea;
+    color: #555;
+}
+
+nav{
+      width: 100%;
+      display: flex;
+      position: fixed;
+      top: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  nav ul li{
+      display: inline-block;
+      list-style: none;
+      margin: 10px 50px;
+  }
+  
+  nav ul li a{
+      text-decoration: none;
+      color: black;
+  }
+  
+  .logo{
+      padding: 0% 1%;
+  }
+  
+  .left-items{
+      padding-left: 15%;
+  }
+  
+  
+  
+  .left-items .MEN{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+    
+    .left-items .MEN:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .MEN:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  
+  .left-items .WOMEN{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+  
+    
+    .left-items .WOMEN:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .WOMEN:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  
+    
+    .left-items .KIDS{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+    
+    .left-items .KIDS:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .KIDS:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+        <a href="index2">
+            <img src="/pictures/MUSE LOGO/Capture.PNG" alt="image not found"  width="060px" >  
+        </a>
+          
+    </div>
+    <% if(session_value == -1) { %>
+        <%    var feature = "login";  %>
+        <%  }  %>
+        <%   if(session_value != -1){  %>
+          <%   feature = "cart";  %>
+          <%  }  %>
+ <ul class=" left-items">
+    <li class="MEN">
+     <a href="men">MEN</a>
+    </li>
+    <li class="WOMEN"> 
+    <a href="women">WOMEN</a>
+    </li>
+    <li class="KIDS">
+    <a href="accesories">ACCESSORIES</a>
+    </li>
+    </ul>
+    <ul class="right items">
+        <li>
+         <% if(session_value != -1) {  %>
+          <form action="/logoutuser" method="post">  
+            <button type="submit"> <ion-icon name="log-out">logout</ion-icon></button>
+            </form>
+            <% }%>
+      
+        </li>
+        <li> 
+    
+          <% if(session_value != -1) {  %>
+               <h4>Hi,<%=session_name%></h4>
+              <% }%>
+              <% if(session_value == -1) {  %>
+                <a href="register"><ion-icon name="person-outline"></ion-icon></a>
+                  <% }%>
+           
+        </li>
+        <li>
+            <a href=<%= feature %>  ><ion-icon name="bag-outline"></ion-icon></a>
+        </li>
+     </ul>
+</nav>
+
+ <div class="container">
+       <div class="form-box">
+         <h1 id="title">Sign In</h1>
+         <form method="post" action="/login">
+                <div class="input-group">
+                   
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input name="email" type="email" placeholder="Email">
+                        </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <input name="password" type="password" placeholder="Password">
+                        </div>   
+                </div>
+                <div>
+                    <div class="btn-field"  style="margin-left: 25%;">
+                        <button type="submit" id="signupBtn">Sign IN</button>
+                    </div>
+                    <h4 style="text-align:center;">Don't have an account <a href="register">Register Here!</a></h4>
+
+                </div>
+         </form>
+       </div>
+ </div>         
+
+
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

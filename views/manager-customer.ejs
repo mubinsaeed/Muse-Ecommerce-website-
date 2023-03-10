@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customerdetail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+ 
+    <style>
+      #cart-container table{
+      border-collapse:collapse ;
+      width: 100%;
+      table-layout: fixed;
+      }
+      #cart-container table thead{
+          font-weight: 700;
+          font-family: 'Montserrat', sans-serif;
+      }
+      #cart-container table thead td{
+          background: black;
+          color: white;
+          border: none;
+          padding: 6px 0;
+      }
+      #cart-container table td{
+       border: 1px solid #b6b3b3;
+       text-align: center;
+      
+      }
+      
+      
+      #cart-container table td:nth-child(1){
+           width: 100px;
+      }
+      
+      #cart-container table td:nth-child(2),
+      #cart-container table td:nth-child(3)
+      {
+           width: 200px;
+      }
+      
+      #cart-container table td:nth-child(4),
+      #cart-container table td:nth-child(5),
+      #cart-container table td:nth-child(6)
+      {
+           width: 170px;
+      }
+      
+      #cart-container table tbody ion-icon{
+          color: black; 
+      }
+      
+</style>      
+ 
+  </head>
+ 
+ 
+ 
+  <body>
+<div style="display: flex; flex-direction:row; justify-content: space-evenly ;" class="text-center mt-5">
+ 
+  <a href="managerpassword123qwe"> <button class="btn  btn-dark">View and update stock</button> </a>
+ <a href="manager-sales"> <button class="btn  btn-dark">View sales</button> </a>
+ <a href="manager-customer"> <button class="btn  btn-dark">View customer data</button> </a>
+</div>
+<section id="cart-container" class="container my-5">
+<table width="100%">
+<thead>
+  <tr>
+    <td>Customer id</td>
+      <td>Name</td>
+    <td>Email</td>
+      <td>Address </td>
+      <td>Total Bill</td>
+
+  </tr>
+</thead>
+<tbody>
+  <%   items.forEach(function(item){  %>
+    <tr>
+
+     
+      <td><h5></h5><%=item.id %></td>
+      <td><h5><%=item.name %></h5></td>
+      <td><h5><%=item.email %></h5></td>
+      <td><h5><%=item.address %></h5></td>
+      <td><h5>$<%=item.grand_total %></h5></td>
+  
+      </tr>
+      <%   }) %>
+  </tbody>
+</table>
+
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="C:\Users\lenevo\Desktop\web development practise\html\WEBSITE\pictures\Capture.PNG">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>MUSE.com</title>
+    <style>
+header{
+    width: 100%;
+    height: 100vh;
+    padding: 0% 0% 0%;
+  }
+  nav{
+      width: 100%;
+      display: flex;
+      position: fixed;
+      top: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  nav ul li{
+      display: inline-block;
+      list-style: none;
+      margin: 10px 50px;
+  }
+  
+  nav ul li a{
+      text-decoration: none;
+      color: black;
+  }
+  
+  .logo{
+      padding: 0% 1%;
+  }
+  
+  .left-items{
+      padding-left: 15%;
+  }
+  
+  
+  
+  .left-items .MEN{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+    
+    .left-items .MEN:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .MEN:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  
+  .left-items .WOMEN{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+  
+    
+    .left-items .WOMEN:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .WOMEN:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  
+    
+    .left-items .KIDS{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+    
+    .left-items .KIDS:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .KIDS:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+   
+  
+.heading{
+font-size: xx-large;
+font-weight: bold;
+margin-left: 40%;
+margin-top: 1cm;
+
+
+} 
+
+
+
+footer{
+  margin-top: 50px;
+  background-color: black;
+  padding: 7% 7% 7%;
+  line-height: 3rem;
+}
+
+footer .row{
+ display: flex;
+}
+
+footer .row .col1{
+  padding-left: 40px;
+  padding-top: 30px;
+  color: white;
+  display: inline-block;
+  max-width: 25%;
+  line-height: 1rem;
+}
+
+footer .row .col2{
+  padding-left: 40px;
+  padding-top: 30px;
+  color: white;
+  max-width: 25%;
+}
+
+footer .row .col2 a{
+color: white;
+text-decoration: none;
+
+}
+
+
+footer .row .col3{
+  padding-left: 40px;
+  padding-top: 30px;
+  color: white;
+  max-width: 25%;
+}
+
+footer .row .col3 a{
+color: white;
+text-decoration: none;
+
+}
+
+footer .row .col4 h5{
+color:  white;
+}
+
+footer .row .col4 p{
+  color: white;
+}
+
+footer .row .col4{
+  padding-left: 40px;
+  padding-top: 30px;
+  color: white;
+  display: inline-block;
+  max-width: 25%;
+}
+
+
+footer .cr h1{
+  color: white;
+  font-size: large;
+
+}
+footer .cr{
+  margin-top:3rem;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+      <% if(session_value == -1) { %>
+        <%    var feature = "login";  %>
+        <%  }  %>
+        <%   if(session_value != -1){  %>
+          <%   feature = "cart";  %>
+          <%  }  %>
+
+          
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index2">
+        <img src="/pictures/MUSE LOGO/Capture.PNG" alt="image not found"  width="060px" >      
+      </a>    
+    </div>
+   
+ <ul class=" left-items">
+    <li class="MEN">
+     <a href="men">MEN</a>
+    </li>
+    <li class="WOMEN"> 
+    <a href="women">WOMEN</a>
+    </li>
+    <li class="KIDS">
+    <a href="accesories">ACCESSORIES</a>
+    </li>
+    </ul>
+    <ul class="right items">
+    <li>
+     <% if(session_value != -1) {  %>
+      <form action="/logoutuser" method="post">  
+        <button type="submit"> <ion-icon name="log-out">logout</ion-icon></button>
+
+      </form>
+        <% }%>
+  
+    </li>
+    <li> 
+
+      <% if(session_value != -1) {  %>
+           <h4>Hi,<%=session_name%></h4>
+          <% }%>
+          <% if(session_value == -1) {  %>
+            <a href="register"><ion-icon name="person-outline"></ion-icon></a>
+              <% }%>
+       
+    </li>
+    <li>
+        <a href=<%= feature %>  ><ion-icon name="bag-outline"></ion-icon></a>
+    </li>
+ </ul>
+</nav>  
+
+
+
+
+
+   </div>   
+        <div class="video">
+            <video width="1520px" autoplay muted loop>
+            <source src="/pictures/women/video2.mp4" type="video/mp4">
+             </video>
+         </div>
+
+
+
+
+    <div class="heading"><p>FEATURED PRODUCTS</p></div>
+
+
+    
+    <div class="container text-center">
+      <div class="row">
+          <div class="col-2">
+             
+            <div class="filter  " style="border: 2px solid black; ">
+              <h4 style="text-align: center; font-weight: bold;">FILTER BY</h4>
+              <p style="font-weight:bolder ;"><b>PRICE</b></p>
+           
+              <form method="post" action="/filter_women" >
+              <p>MIN <input type="range" name="pricef" id="pf" style="color:black;"> &nbsp; MAX</p>
+                <button name="button" class="btn btn-dark mb-4 " type="submit">Apply filter</button>
+              </form>
+          
+      </div> 
+
+
+        </div>
+      <div class="col">
+        <div class="row row-cols-auto ">
+          <%  products.forEach(function(product){   %>
+            <div class="col">
+              <div class="card" style="width: 18rem; margin-top: 25px; border-radius: 2px solid black;">
+                  <img src=<%= product.img_url %> class="card-img-top" alt="..." style=" height:300px; width: auto;">
+             <div class="card-body">
+               <p class="card-title" style="font-weight:bolder ;text-align:center;"><%=product.title.substring(0, 24) + " ..."  %></p>
+               <p class="card-text" style="text-align: center; font-size: large;">$<%=product.price  %></p>
+                <%var customurl = "product/"+product.Pid%>
+      
+              
+               <a href= <%= customurl %> class="btn btn-dark col-md-12 text-center">SHOP NOW</a>
+             </div>
+           </div>
+          </div>
+      
+            <% } )      %>
+       
+      
+      
+      </div>
+
+
+
+      </div>
+       </div>
+
+
+
+</div>
+
+
+
+<footer>
+  <div class="footer">
+         <div class="row ">
+                          <div class="col1 ">
+                                   <h5 class="col1-heading"> MUSE</h6>
+                                     <p class="col1-text1">We’re available by phone +123-456-789 </p> 
+                                     <p class="col1-text2">info@example.com</p>
+                                     <p class="col1-text3">Monday till Friday 10 to 6 EST </p> 
+                          </div>
+                         
+                          <div class="col2 ">
+                           <h5 class="col2-heading">About US</h6>
+                             <ul>
+                              <li> <a href="#">Contact US</a></li> 
+                              <li> <a href="#">Factories</a></li> 
+                              <li> <a href="#">Careers</a></li> 
+                              <li> <a href="#">Shipping Policy</a></li> 
+                              <li> <a href="#">Terms and conditions</a></li> 
+                              <li> <a href="#">Refund Policy</a></li> 
+                             </ul>
+                         </div>
+
+                         <div class="col3 ">
+                           <h5 class="col3-heading">Our Shop</h6>
+                             <ul>
+                              <li> <a href="#">New Arrival</a></li> 
+                              <li> <a href="#">Top Trending</a></li> 
+                              <li> <a href="#">Autumn Collection</a></li> 
+                              <li> <a href="#">Back in Stock</a></li> 
+                              <li> <a href="#">Denim Collection</a></li> 
+                             </ul>
+                          </div>
+                         
+                          <div class="col4">
+                           <h5 class="col4-heading">Newsletter</h6>
+                             <p class="col4-text4">Receive our weekly newsletter. For dietary content, fashion insider and the best offers.</p> 
+                             <div class="input-group mb-3">
+                               <input type="text" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                               <button class="btn btn-light  btn-outline-secondary btn-lg" type="button" id="button-addon2">JOIN</button>
+                             </div>
+                          </div>
+          </div>
+<div class="cr">
+<h1>Copyright © 2022 MUSE. All rights reserved.</h1>
+</div>
+
+
+  </div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

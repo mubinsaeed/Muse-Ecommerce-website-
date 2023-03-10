@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <title>MUSE.com</title>
+    <style>
+.progress{
+            margin: 300px auto 500px auto;
+        }
+.progress img{
+    width: 80px;
+    margin-bottom: 10px;
+}
+.progress ul{
+    text-align: center;
+}
+.progress ul li{
+    display: inline-block;
+    width: 200px;
+}
+body{
+    background-image: url(/pictures/shipping-img/colorful-shopping-bags.jpg);
+    background-size: cover;
+    background-position:center;
+    /* font-family: sans-serif; */
+    color: black;
+    /* font-weight: bold; */
+}
+
+.progress ul li .fa-solid,
+.progress ul li .fa-regular{
+       background-color: white;
+       width: 16px;
+       height: 16px;
+       color: black;
+       border-radius: 50%;
+       padding: 5px;
+}
+
+.progress li .fa-solid::after{
+    content: '';
+    background: black;
+    height: 5px;
+    width: 205px;
+    display: block;
+    position: relative;
+    left: 0;
+    top: -10px;
+    z-index: -1;
+}
+
+
+.progress ul li:nth-child(2) .fa-solid,
+.progresss ul li:nth-child(1) .fa-solid
+{
+background: green;
+color: white;
+}
+
+
+
+nav{
+      width: 100%;
+      display: flex;
+      position: fixed;
+      top: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  nav ul li{
+      display: inline-block;
+      list-style: none;
+      margin: 10px 50px;
+  }
+  
+  nav ul li a{
+      text-decoration: none;
+      color: black;
+  }
+  
+  .logo{
+      padding: 0% 1%;
+  }
+  
+  .left-items{
+      padding-left: 15%;
+  }
+  
+  
+  
+  .left-items .MEN{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+    
+    .left-items .MEN:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .MEN:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  
+  .left-items .WOMEN{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+  
+    
+    .left-items .WOMEN:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .WOMEN:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  
+    
+    .left-items .KIDS{
+      display: inline-block;
+      position: relative;
+      color: black;
+    }
+    
+    .left-items .KIDS:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .left-items .KIDS:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index2">
+                <img src="/pictures/MUSE LOGO/Capture.PNG" alt="image not found"  width="060px" >  
+            </a>
+              
+        </div>
+       
+     <ul class=" left-items">
+        <li class="MEN">
+         <a href="men">MEN</a>
+        </li>
+        <li class="WOMEN"> 
+        <a href="women">WOMEN</a>
+        </li>
+        <li class="KIDS">
+        <a href="accesories">ACCESSORIES</a>
+        </li>
+        </ul>
+        <ul class="right items">
+            <li>
+              <form action="/logoutuser" method="post">  
+                <button type="submit"> <ion-icon name="log-out">logout</ion-icon></button>
+              </form>
+                
+          
+            </li>
+            
+         </ul>
+    </nav> 
+
+    <section>
+    <div class="progress">
+    <ul>
+        <li>
+            <img src="/pictures/shipping-img/OBFGFZ0 (1).png" alt=""><br>
+            <i class="fa-solid fa-check"></i>
+            <p>Order placed</p>
+        </li>
+
+        <li>
+            <img src="/pictures/shipping-img/OBFGFZ0 (2).png" alt=""><br>
+            <i class="fa-solid fa-clock"></i>
+            <p>Rider on the way</p>
+        </li>
+
+        <li>
+            <img src="/pictures/shipping-img/OBFGFZ0 (3).png" alt=""><br>
+            <i class="fa-regular fa-clock"></i>
+            <p>Delivered</p>
+        </li>
+    </ul>
+</div>
+</section>
+
+
+
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
