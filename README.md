@@ -1,6 +1,7 @@
 # Muse-Ecommerce-website-
 Muse is clothing brand website having categories of men's wear, women's wear and accessories
-
+This website was created using html,css,bootstrap,ejs templates,expressJs as middleware and mysql as the database
+The server file fetch the data of products from api and populate the data dynamically and then render products on webpages
 # Following below are the images of the website
 
 ![1](https://user-images.githubusercontent.com/127494370/224294503-540ae559-8477-45c1-b19b-879de8b72c27.JPG)
